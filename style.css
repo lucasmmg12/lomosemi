@@ -76,6 +76,136 @@ body {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .no-scrollbar {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* ===== SUPER BARROLUCO GIGANTE - Featured Section ===== */
+
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(211, 47, 47, 0.3), 0 0 60px rgba(211, 47, 47, 0.1);
+        border-color: rgba(211, 47, 47, 0.5);
+    }
+
+    50% {
+        box-shadow: 0 0 30px rgba(211, 47, 47, 0.5), 0 0 80px rgba(211, 47, 47, 0.2), 0 0 120px rgba(255, 107, 53, 0.1);
+        border-color: rgba(255, 107, 53, 0.7);
+    }
+}
+
+@keyframes shimmer-gold {
+    0% {
+        background-position: -200% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+@keyframes float-subtle {
+
+    0%,
+    100% {
+        transform: translateY(0px) scale(1);
+    }
+
+    50% {
+        transform: translateY(-8px) scale(1.02);
+    }
+}
+
+@keyframes badge-pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.featured-card {
+    animation: pulse-glow 3s ease-in-out infinite;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.featured-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 40px rgba(211, 47, 47, 0.6), 0 0 100px rgba(211, 47, 47, 0.3), 0 0 160px rgba(255, 107, 53, 0.15);
+}
+
+.featured-img {
+    animation: float-subtle 4s ease-in-out infinite;
+}
+
+.badge-estrella {
+    background: linear-gradient(90deg, #FF6B35, #FFD700, #FF6B35, #FFD700, #FF6B35);
+    background-size: 200% 100%;
+    animation: shimmer-gold 3s linear infinite, badge-pulse 2s ease-in-out infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.stat-box {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stat-box:hover {
+    border-color: rgba(211, 47, 47, 0.4);
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-2px);
+}
+
+.ingredient-chip {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.ingredient-chip:hover {
+    background: rgba(211, 47, 47, 0.15);
+    border-color: rgba(211, 47, 47, 0.4);
+    transform: translateY(-1px);
+}
+
+.btn-featured {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px rgba(211, 47, 47, 0.4);
+}
+
+.btn-featured:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 30px rgba(211, 47, 47, 0.6);
+}
+
+.btn-featured::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: rotate(45deg);
+    transition: all 0.6s;
+    opacity: 0;
+}
+
+.btn-featured:hover::after {
+    opacity: 1;
+    animation: shimmer-gold 1.5s linear;
 }

@@ -46,7 +46,13 @@ const PRODUCTS = [
     { id: 502, category: 'sandwiches', name: 'Americano', desc: 'Tostado especial.', price: 7000, img: '/Tostado Miga.webp' },
     { id: 503, category: 'sandwiches', name: 'Barroluco', desc: 'Doble miga con carne y queso.', price: 35000, img: '/Barroluco.webp' },
 
+
+    // HAMBURGUESAS DE POLLO
+    { id: 304, category: 'hamburguesas', name: 'Pollo Pan Común', desc: 'Hamburguesa de pollo crispy con pan común.', price: 5000, img: '/hamburguesa_pollo_comun.png' },
+    { id: 305, category: 'hamburguesas', name: 'Pollo Pan de Papa', desc: 'Hamburguesa de pollo crispy con pan de papa.', price: 6000, img: '/hamburguesa_pollo_papa.png' },
+
     // FRITAS & MINUTAS
+    { id: 604, category: 'minutas', name: 'Papas Fritas EMI', desc: 'Porción gigante con cheddar, panceta y salsa especial.', price: 15000, img: '/papas_fritas_emi.png' },
     { id: 601, category: 'minutas', name: 'Papas Chicas', desc: 'Porción individual.', price: 5000, img: '/papas fritas comunes.webp' },
     { id: 602, category: 'minutas', name: 'Papas Grandes', desc: 'Para compartir.', price: 8000, img: '/papas fritas comunes.webp' },
     {
